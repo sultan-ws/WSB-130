@@ -18,7 +18,6 @@ const connection = async () => {
 };
 
 const saveData = async () => {
-    console.log('object');
     const User = await connection();
     console.log(User);
 
