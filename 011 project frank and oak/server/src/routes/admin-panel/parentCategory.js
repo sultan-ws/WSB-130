@@ -3,6 +3,6 @@ const { createParentCategory } = require('../../controllers/controllers');
 
 const parentCategoryRouter = express.Router();
 
-parentCategoryRouter.get('/insert-category', createParentCategory);
+parentCategoryRouter.post('/insert-category', createParentCategory);
 
-module.exports = parentCategoryRouter
+module.exports = parentCategoryRouter;

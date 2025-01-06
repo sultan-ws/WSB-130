@@ -6,7 +6,7 @@ const AddSizes = () => {
       <span className="block bg-[#f8f8f9] h-[50px] rounded-[10px_10px_0_0] border-b p-[8px_16px] text-[25px] font-[700] text-[#303640]">
         Add Size
       </span>
-      <form>
+      <form method="post">
         <div className="w-full p-[8px_16px] my-[10px] ">
           <label htmlFor="size" className="text-[#252b36f2]">
             Size Name

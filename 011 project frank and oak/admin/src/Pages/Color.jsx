@@ -38,11 +38,20 @@ function Color() {
     });
   };
 
+  const handleAddColor = (e)=>{
+    e.preventDefault();
+    const data = {
+      name:e.target.color.value,
+      code: e.target.color_code.value
+    }
+  }
+
   return (
     <div className="w-[90%] bg-white mx-auto rounded-[10px] border my-[150px]">
       <div className="bg-[#f8f8f9] h-[50px] header w-full p-[12px] rounded-[10px_10px_0_0]">
         Add Colors
       </div>
+      <form method="post" onSubmit={handleAddColor}>
       <div className="w-full p-[20px]">
         <label htmlFor="color">Color Name</label> <br />
         <input
@@ -92,10 +101,11 @@ function Color() {
             Pick Color
           </span>
         </div>
-        {/* <button className="bg-[#5351C9] text-white rounded-[5px]  w-[120px] h-[40px]">
-          Select Color
-        </button> */}
+        <button className="bg-[#5351C9] text-white rounded-[5px]  w-[120px] h-[40px]">
+          Add Color
+        </button>
       </div>
+      </form>
     </div>
   );
 }
