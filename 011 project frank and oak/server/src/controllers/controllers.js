@@ -4,12 +4,14 @@ const {
     createParentCategory,
     readCategories,
     updateCategoryStatus,
-    deleteParentCategory
+    deleteParentCategory,
+    deleteParentCategories
 } = require("./admin-panel/parentCategory");
 
 module.exports = {
     createParentCategory,
     readCategories,
     updateCategoryStatus,
-    deleteParentCategory
+    deleteParentCategory,
+    deleteParentCategories
 }

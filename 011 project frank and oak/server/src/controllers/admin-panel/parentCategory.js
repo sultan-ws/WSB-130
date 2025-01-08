@@ -52,9 +52,22 @@ const deleteParentCategory = async (req, res) => {
         res.status(500).json({message: 'internal server error'});
     }
 }
+
+const deleteParentCategories = async(req, res)=>{
+    try{
+        const data = await ParentCategory.deleteMany({_id: {$in:req.body.ids}});
+        res.status(200).json({message: 'success', data});
+    }
+    catch(error){
+        console.log(error);
+        res.status(500).json({message:'internal server server'})
+    }
+};
+
 module.exports = {
     createParentCategory,
     readCategories,
     updateCategoryStatus,
-    deleteParentCategory
+    deleteParentCategory,
+    deleteParentCategories
 }
